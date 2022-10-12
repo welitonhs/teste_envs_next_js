@@ -4,6 +4,8 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log(`
+
+    consolesim!
   
     ${process.env.NEXT_PUBLIC_TESTE}
   
