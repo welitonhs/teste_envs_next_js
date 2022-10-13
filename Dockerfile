@@ -3,8 +3,8 @@ WORKDIR /frontend-v3
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-FROM node:lts as builder
-ENV NEXT_PUBLIC_TESTE=$NEXT_PUBLIC_TESTE
+# FROM node:lts as builder
+# ENV NEXT_PUBLIC_TESTE=$NEXT_PUBLIC_TESTE
 
 WORKDIR /frontend-v3
 COPY . .
