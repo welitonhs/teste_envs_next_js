@@ -12,7 +12,7 @@ COPY --from=dependencies /frontend-v3/node_modules ./node_modules
 RUN yarn build
 
 FROM node:lts as runner
-ENV NODE_ENV development
+ENV NODE_ENV production
 WORKDIR /frontend-v3
 
 COPY --from=builder /frontend-v3/next.config.js ./
