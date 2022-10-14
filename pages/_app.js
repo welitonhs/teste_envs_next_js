@@ -5,9 +5,11 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log(`
 
-    consolesim!
+    inicio console!
   
-    ${process.env.NEXT_PUBLIC_TESTE}
+    ENV AQUI => ${process.env.NEXT_PUBLIC_TESTE}
+
+    fim console!
   
   `)
   },[]);
