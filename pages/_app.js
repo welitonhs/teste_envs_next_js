@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log(`
 
-    inicio console! 1.5
+    inicio console! 1.6
   
     ENV AQUI => ${process.env.NEXT_PUBLIC_TESTE}
 

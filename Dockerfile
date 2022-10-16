@@ -5,7 +5,9 @@ RUN yarn install --frozen-lockfile
 
 FROM node:lts as builder
 
-ENV NEXT_PUBLIC_TESTE env_aqui
+ARG NEXT_PUBLIC_TESTE
+
+ENV NEXT_PUBLIC_TESTE $NEXT_PUBLIC_TESTE
 
 WORKDIR /frontend-v3
 COPY . .
