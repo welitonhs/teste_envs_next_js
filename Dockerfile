@@ -4,17 +4,16 @@ COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
 FROM node:lts as builder
+
+ENV NEXT_PUBLIC_TESTE env_aqui
+
 WORKDIR /frontend-v3
 COPY . .
 COPY --from=dependencies /frontend-v3/node_modules ./node_modules
 RUN yarn build
 
 FROM node:lts as runner
-
-ARG NEXT_PUBLIC_TESTE
-
 ENV NODE_ENV production
-ENV NEXT_PUBLIC_TESTE aqui_sim
 WORKDIR /frontend-v3
 
 COPY --from=builder /frontend-v3/next.config.js ./
