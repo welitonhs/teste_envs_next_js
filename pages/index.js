@@ -11,9 +11,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h2>Inicio console! 1.10!</h2>
+        <h1>Inicio console! 1.10!</h1>
 
-        <h4>ENV AQUI {process.env.NEXT_PUBLIC_TESTE}</h4>
+        <h2>ENV AQUI {process.env.NEXT_PUBLIC_TESTE}</h2>
+        <h3>{process.env.NEXT_PUBLIC_TESTE_ENV_2}</h3>
       </main>
 
       <footer className={styles.footer}>
