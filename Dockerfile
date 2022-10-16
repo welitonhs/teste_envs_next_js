@@ -10,6 +10,9 @@ COPY --from=dependencies /frontend-v3/node_modules ./node_modules
 RUN yarn build
 
 FROM node:lts as runner
+
+ARG NEXT_PUBLIC_TESTE
+
 ENV NODE_ENV production
 ENV NEXT_PUBLIC_TESTE $NEXT_PUBLIC_TESTE
 WORKDIR /frontend-v3
