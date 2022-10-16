@@ -14,7 +14,7 @@ FROM node:lts as runner
 ARG NEXT_PUBLIC_TESTE
 
 ENV NODE_ENV production
-ENV NEXT_PUBLIC_TESTE $NEXT_PUBLIC_TESTE
+ENV NEXT_PUBLIC_TESTE aqui_sim
 WORKDIR /frontend-v3
 
 COPY --from=builder /frontend-v3/next.config.js ./
